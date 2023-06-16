@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="style.css" />
 
     <!-- JQuery CDN link -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -246,10 +248,11 @@
       <div class="form">
         <h3>Daftarkan diri anda Sekarang!</h3>
 
-        <input type="text" placeholder="Name" name="" id="" />
-        <input type="email" placeholder="Email ID" name="" id="" />
-        <input type="text" placeholder="Asal Sekolah" name="" id="" />
-        <input type="number" placeholder="Contact Number" name="" id="" />
+        <input type="text" placeholder="Name" name="" id="name" />
+        <input type="number" placeholder="DDDD-MM-YY" name="" id="name" />
+        <input type="email" placeholder="Email ID" name="" id="email" />
+        <input type="text" placeholder="Pendidikan terakhir" name="" id="sekolah" />
+        <input type="number" placeholder="Whatsapp" name="" id="nomorhp" />
         <select>
           <option selected disabled>Pilih Jenis Kelas</option>
           <option>Praxis For Student</option>
@@ -257,7 +260,7 @@
           <option>Praxis Academy Community</option>
         </select>
 
-        <div class="btn">
+        <div class="btn" id="form-submit">
           <a href="#" class="yellow">Submit Form</a>
         </div>
       </div>
@@ -383,6 +386,20 @@
     </footer>
     <!-- Footer section ends from here -->
 
+    <script>
+      const name= document.getElementById("#name")      
+      const email= document.getElementById("email")      
+      const sekolah= document.getElementById("sekolah")      
+      const nomorhp= document.getElementById("nomorhp")      
+
+      const submitbtn = document.getElementById("form-submit")
+      
+      submitbtn.addEventListener("click", function myFunction() {
+        console.log(name.value);
+      })
+
+      
+    </script>
     <script>
       // Show menu links on burger click
       $("#menu-btn").click(function () {
